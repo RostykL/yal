@@ -1,38 +1,101 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fafafa;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.wrapper {
+  width: 80%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #f5f5f5;
+  display: flex;
+  box-shadow: 0 0 50px -4px rgba(0, 0, 0, 0.47);
+  border-radius: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.employees {
+  width: 60%;
+}
+
+.birthday {
+  width: 40%;
+  border-left: 1px solid #e5e5e5;
+}
+
+.align {
+  border-bottom: 1px solid #e5e5e5;
+  font-family: 'Anton', sans-serif;
+  color: lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+.employees_info_block {
+  display: flex;
+  overflow: auto;
+}
+
+.employees_block {
+  padding: 20px;
+}
+
+
+.info_field {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  min-width: 200px;
+  justify-content: space-between;
+}
+
+.employee_letter {
+  font-family: 'Anton', sans-serif;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  text-transform: uppercase;
+  color: lightblue;
+}
+
+.birthday_block {
+  padding: 20px 20px 50px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  overflow: scroll;
+  height: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.birthday_block_item {
+  margin: 10px;
+  height: 200px;
+  background-color: lightblue;
+  border-radius: 10px;
+  padding: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.month_name {
+  font-family: 'Anton', sans-serif;
 }
+
+.birthday_info:empty {
+  display: none;
+}
+
+.info_field > input {
+  transform: scale(2);
+}
+
